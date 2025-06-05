@@ -18,3 +18,10 @@ export interface IButton {
   onClick: MouseEventHandler;
   type: string;
 }
+
+export interface CContext {
+  cities: ICity[];
+  loading: boolean;
+  currentCity: ICity | null;
+  getCity: (id: string) => void;
+}
