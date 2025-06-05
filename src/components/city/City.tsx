@@ -1,17 +1,18 @@
 import styles from "./City.module.css";
 import type { ICity } from "../../lib/types";
-// import { formatDate } from "../../lib/utils";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { formatDate } from "../../lib/utils";
+import useCities from "../../context/useCities";
 
-function City({ cities }: { cities: ICity[] }) {
+function City() {
+  const { cities } = useCities();
   const [currentCountry, setCurrentCountry] = useState<ICity[]>([]);
   const { id } = useParams();
 
   useEffect(() => {
     const Country = cities?.filter((item) => {
-      return item.id === (Number(id) as unknown);
+      return item.id === id;
     });
     setCurrentCountry(Country);
   }, [cities, id]);

@@ -7,30 +7,31 @@ import AppLayout from "./pages/app/AppLayout";
 import Form from "./components/form/Form";
 import PageNotFound from "./pages/PageNotFound";
 import CityList from "./components/city/CityList";
-import { useEffect, useState } from "react";
-import type { ICity } from "./lib/types";
+import { useEffect } from "react";
+
 import CountryList from "./components/country/CoutriesList";
 import City from "./components/city/City";
+import useCities from "./context/useCities";
 
 const BASE_URL = "http://localhost:8000/cities";
 
 function App() {
-  const [cities, setCities] = useState<ICity[]>([]);
-  const [loading, setLoading] = useState(false);
+  const { onSetCities, onSetLoading } = useCities();
 
   useEffect(() => {
     (async () => {
-      setLoading(true);
+      onSetLoading(true);
       try {
         const response = await fetch(BASE_URL);
         const data = await response.json();
-        setCities(data);
+        onSetCities(data);
       } catch (err) {
         console.log(err);
       } finally {
-        setLoading(false);
+        onSetLoading(false);
       }
     })();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -44,17 +45,11 @@ function App() {
           <Route path="app" element={<AppLayout />}>
             <Route index element={<Navigate to={"cities"} />} />
 
-            <Route
-              path={"cities"}
-              element={<CityList cities={cities} isLoading={loading} />}
-            ></Route>
+            <Route path={"cities"} element={<CityList />}></Route>
 
-            <Route path="cities/:id" element={<City cities={cities} />} />
+            <Route path="cities/:id" element={<City />} />
 
-            <Route
-              path="countries"
-              element={<CountryList cities={cities} isLoading={loading} />}
-            />
+            <Route path="countries" element={<CountryList />} />
 
             <Route path={"form"} element={<Form />} />
           </Route>

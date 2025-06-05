@@ -3,15 +3,13 @@ import styles from "./CountryList.module.css";
 import type { ICity } from "../../lib/types";
 import Message from "../message/Message";
 import CountryItem from "./CountryItem";
+import useCities from "../../context/useCities";
 
-type TCityList = {
-  cities: ICity[] | null;
-  isLoading: boolean;
-};
 type Tcountry = Array<Pick<ICity, "id" | "emoji" | "country">>;
 
-export default function CountryList({ cities, isLoading }: TCityList) {
-  if (isLoading) return <Spinner />;
+export default function CountryList() {
+  const { cities, loading } = useCities();
+  if (loading) return <Spinner />;
   if (cities?.length === 0)
     return (
       <Message message={"Add your first city by clicking a city on the map"} />
