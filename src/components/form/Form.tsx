@@ -17,6 +17,7 @@ function Form() {
   const [lat, lng] = useURLPosition();
   const [emoji, setEmoji] = useState("");
   const [geoCodingError, setGeoCodingError] = useState<string | null>(null);
+  console.log(country);
   const [geoLoading, setGeoLoading] = useState(false);
 
   useEffect(() => {
