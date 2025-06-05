@@ -16,23 +16,22 @@ import useCities from "./context/useCities";
 const BASE_URL = "http://localhost:8000/cities";
 
 function App() {
-  const { onSetCities, onSetLoading } = useCities();
+  const { setCities, setLoading } = useCities();
 
   useEffect(() => {
     (async () => {
-      onSetLoading(true);
+      setLoading(true);
       try {
         const response = await fetch(BASE_URL);
         const data = await response.json();
-        onSetCities(data);
+        setCities(data);
       } catch (err) {
         console.log(err);
       } finally {
-        onSetLoading(false);
+        setLoading(false);
       }
     })();
-    // eslint-disable-next-line
-  }, []);
+  }, [setCities, setLoading]);
 
   return (
     <div>

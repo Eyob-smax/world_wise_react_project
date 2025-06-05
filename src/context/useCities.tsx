@@ -3,9 +3,9 @@ import type { ICity } from "../lib/types";
 
 interface CContext {
   cities: ICity[];
-  onSetCities: (city: ICity[]) => void;
+  setLoading: (value: boolean) => void;
   loading: boolean;
-  onSetLoading: (value: boolean) => void;
+  setCities: (city: ICity[]) => void;
 }
 
 export const CitiesContext = createContext<CContext | null>(null);
