@@ -25,3 +25,9 @@ export interface CContext {
   currentCity: ICity | null;
   getCity: (id: string) => void;
 }
+
+export type TMapPosition = [number, number];
+
+export interface IChangeCenterProps {
+  position: TMapPosition;
+}

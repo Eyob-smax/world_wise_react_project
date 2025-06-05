@@ -11,6 +11,7 @@ import CityList from "./components/city/CityList";
 import CountryList from "./components/country/CoutriesList";
 import City from "./components/city/City";
 import CitiesProvider from "./context/CitiesProvider";
+import "leaflet/dist/leaflet.css";
 
 function App() {
   return (
