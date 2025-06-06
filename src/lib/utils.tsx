@@ -52,6 +52,7 @@ export function reducer(
       return {
         ...state,
         cities: state.cities.filter((city) => city.id !== action.payload),
+        loading: false,
       };
     case "loading":
       return { ...state, loading: true };
