@@ -1,30 +1,6 @@
 {
   "cities": [
     {
-      "id": "31fa",
-      "cityName": "Casas Ibanez",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "kjfhasdlfkasdlkfhasdlfkhadlfkashdlkahdfljkahdlkhaflkahdflakjdfhalkdjhflkadjfasdkfjadlfkjahdlfkjhdklhas",
-      "position": {
-        "lat": 39.28410202115072,
-        "lng": -1.4694213867187502
-      }
-    },
-    {
-      "id": "dcc2",
-      "cityName": "Granada",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 37.166552492225726,
-        "lng": -3.5980224609375
-      }
-    },
-    {
       "id": "c0b6",
       "cityName": "Chagne",
       "country": "Ethiopia",
@@ -34,18 +10,6 @@
       "position": {
         "lat": 10.958045414448664,
         "lng": 36.5017318725586
-      }
-    },
-    {
-      "id": "f5ea",
-      "cityName": "Segorbe",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 39.85282948915942,
-        "lng": -0.4856849602816738
       }
     },
     {
@@ -97,18 +61,6 @@
       }
     },
     {
-      "id": "857f",
-      "cityName": "Cirat",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 40.042639147035445,
-        "lng": -0.48889160156250006
-      }
-    },
-    {
       "id": "a5b1",
       "cityName": "Debre Zeyit",
       "country": "Ethiopia",
@@ -133,18 +85,6 @@
       }
     },
     {
-      "id": "0bcf",
-      "cityName": "Debre Zeyit",
-      "country": "Ethiopia",
-      "emoji": "🇪🇹",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 10.801441866632018,
-        "lng": 35.41168212890626
-      }
-    },
-    {
       "id": "9100",
       "cityName": "Lucena del Cid",
       "country": "Spain",
@@ -166,30 +106,6 @@
       "position": {
         "lat": 40.40521103446309,
         "lng": -0.4449462890625
-      }
-    },
-    {
-      "id": "a548",
-      "cityName": "Vistabella del Maestrazgo",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 40.26921874161294,
-        "lng": -0.35980224609375006
-      }
-    },
-    {
-      "id": "aca6",
-      "cityName": "Yecla",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 38.73030576885634,
-        "lng": -1.1645507812500002
       }
     }
   ]

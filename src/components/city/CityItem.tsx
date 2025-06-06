@@ -3,16 +3,23 @@ import type { ICity } from "../../lib/types";
 import { formatDate } from "../../lib/utils";
 import { Link } from "react-router-dom";
 import useCities from "../../context/useCities";
-import type { MouseEvent } from "react";
+import { useEffect, type MouseEvent } from "react";
+import useLocalStorage from "../../customhooks/useLocalStorage";
 
 export default function CityItem({ city }: { city: ICity }) {
   const { lat, lng } = city.position!;
   const { currentCity } = useCities();
   const { deleteCity } = useCities();
+  const [state, setStateFunc] = useLocalStorage("currentCity", currentCity!);
+
+  useEffect(() => {
+    setStateFunc(currentCity!);
+  }, [currentCity, setStateFunc]);
 
   async function handleDelete(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    if (currentCity?.id) deleteCity(currentCity.id!);
+    if (!currentCity) return;
+    if (currentCity?.id) deleteCity(state.id!);
   }
   return (
     <li>
