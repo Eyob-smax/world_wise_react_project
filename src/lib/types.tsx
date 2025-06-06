@@ -5,7 +5,7 @@ export interface ICity {
   country: string;
   date: string;
   emoji: string;
-  id: string;
+  id?: string;
   notes: string;
   position?: {
     lat: number;
@@ -15,8 +15,9 @@ export interface ICity {
 
 export interface IButton {
   children: ReactNode;
-  onClick: MouseEventHandler;
+  onClick?: MouseEventHandler;
   type: string;
+  buttonType?: "submit" | "reset" | "button" | undefined;
 }
 
 export interface CContext {
@@ -24,6 +25,9 @@ export interface CContext {
   loading: boolean;
   currentCity: ICity | null;
   getCity: (id: string) => void;
+  createCity: (city: ICity) => void;
+  deleteCity: (city: string) => void;
+  error: string | null;
 }
 
 export type TMapPosition = [number, number];

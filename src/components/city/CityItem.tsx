@@ -3,10 +3,17 @@ import type { ICity } from "../../lib/types";
 import { formatDate } from "../../lib/utils";
 import { Link } from "react-router-dom";
 import useCities from "../../context/useCities";
+import type { MouseEvent } from "react";
 
 export default function CityItem({ city }: { city: ICity }) {
   const { lat, lng } = city.position!;
   const { currentCity } = useCities();
+  const { deleteCity } = useCities();
+
+  async function handleDelete(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    if (currentCity?.id) deleteCity(currentCity.id!);
+  }
   return (
     <li>
       <Link
@@ -18,7 +25,9 @@ export default function CityItem({ city }: { city: ICity }) {
         <span className={styles.emoji}>{city.emoji}</span>
         <h3 className={styles.name}>{city.cityName}</h3>
         <time className={styles.date}>{formatDate(city.date, true)}</time>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button onClick={handleDelete} className={styles.deleteBtn}>
+          &times;
+        </button>
       </Link>
     </li>
   );

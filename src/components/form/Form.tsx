@@ -1,3 +1,4 @@
+import "react-datepicker/dist/react-datepicker.css";
 import Button from "../Button";
 import { useState, useEffect } from "react";
 import styles from "./Form.module.css";
@@ -6,6 +7,10 @@ import useURLPosition from "../../customhooks/useURLPosition";
 import Spinner from "../spinner/Spinner";
 import Message from "../message/Message";
 import { convertToEmoji } from "../../lib/utils";
+import DatePicker from "react-datepicker";
+import type { ICity } from "../../lib/types";
+import useCities from "../../context/useCities";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
@@ -19,8 +24,11 @@ function Form() {
   const [geoCodingError, setGeoCodingError] = useState<string | null>(null);
   console.log(country);
   const [geoLoading, setGeoLoading] = useState(false);
+  const { createCity, error, loading } = useCities();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!lat && !lng) return;
     (async () => {
       setGeoCodingError(null);
       setGeoLoading(true);
@@ -46,12 +54,38 @@ function Form() {
     })();
   }, [lat, lng]);
 
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!cityName || !date) return;
+    const newCity: ICity = {
+      cityName,
+      country,
+      emoji,
+      date: date.toISOString().split("T")[0],
+      notes,
+      position: {
+        lat: Number(lat),
+        lng: Number(lng),
+      },
+    };
+
+    await Promise.resolve(createCity(newCity));
+    navigate("/app/cities");
+  }
+
   if (geoCodingError) return <Message message={geoCodingError} />;
+
+  if (!lat && !lng)
+    return <Message message={"Start by selecting places on the map."} />;
+  if (error) return <Message message={error} />;
 
   if (geoLoading) return <Spinner />;
 
   return (
-    <form onSubmit={(e) => e.preventDefault()} className={styles.form}>
+    <form
+      onSubmit={handleSubmit}
+      className={`${styles.form} ${loading ? styles.loading : ""}`}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -64,11 +98,10 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+        <DatePicker
           id="date"
-          type="date"
-          onChange={(e) => setDate(new Date(e.target.value))}
-          value={date.toISOString().split("T")[0]}
+          selected={date}
+          onChange={(date) => setDate(date!)}
         />
       </div>
 
@@ -83,9 +116,7 @@ function Form() {
 
       <div className={styles.buttons}>
         <BackButton />
-        <Button onClick={() => {}} type="primary">
-          Add
-        </Button>
+        <Button type="primary">Add</Button>
       </div>
     </form>
   );

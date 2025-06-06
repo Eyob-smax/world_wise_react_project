@@ -1,52 +1,196 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 730385
-    },
-    {
-      "cityName": "Madrid",
+      "id": "31fa",
+      "cityName": "Casas Ibanez",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "date": "2025-06-06",
+      "notes": "kjfhasdlfkasdlkfhasdlfkhadlfkashdlkahdfljkahdlkhaflkahdflakjdfhalkdjhflkadjfasdkfjadlfkjahdlfkjhdklhas",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 178751
+        "lat": 39.28410202115072,
+        "lng": -1.4694213867187502
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 983197
-    },
-    {
-      "cityName": "Nijar",
+      "id": "dcc2",
+      "cityName": "Granada",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2023-04-03T07:47:59.202Z",
+      "date": "2025-06-06",
       "notes": "",
       "position": {
-        "lat": "36.967508314568164",
-        "lng": "-2.13128394200588"
-      },
-      "id": 98198
+        "lat": 37.166552492225726,
+        "lng": -3.5980224609375
+      }
+    },
+    {
+      "id": "c0b6",
+      "cityName": "Chagne",
+      "country": "Ethiopia",
+      "emoji": "🇪🇹",
+      "date": "2025-06-06",
+      "notes": "This is where I used to live.",
+      "position": {
+        "lat": 10.958045414448664,
+        "lng": 36.5017318725586
+      }
+    },
+    {
+      "id": "f5ea",
+      "cityName": "Segorbe",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 39.85282948915942,
+        "lng": -0.4856849602816738
+      }
+    },
+    {
+      "id": "8519",
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.04233491818056,
+        "lng": -0.019226074218750003
+      }
+    },
+    {
+      "id": "f19f",
+      "cityName": "Villahermosa del Rio",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.2313150803688,
+        "lng": -0.42572021484375
+      }
+    },
+    {
+      "id": "f636",
+      "cityName": "Rubielos de Mora",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.17257757632171,
+        "lng": -0.6729125976562501
+      }
+    },
+    {
+      "id": "1eec",
+      "cityName": "Barracas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.01499435375048,
+        "lng": -0.7305908203125001
+      }
+    },
+    {
+      "id": "857f",
+      "cityName": "Cirat",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.042639147035445,
+        "lng": -0.48889160156250006
+      }
+    },
+    {
+      "id": "a5b1",
+      "cityName": "Debre Zeyit",
+      "country": "Ethiopia",
+      "emoji": "🇪🇹",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 10.890445690647221,
+        "lng": 35.85662841796876
+      }
+    },
+    {
+      "id": "0277",
+      "cityName": "Guba",
+      "country": "Ethiopia",
+      "emoji": "🇪🇹",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 11.192123748888509,
+        "lng": 35.56823730468751
+      }
+    },
+    {
+      "id": "0bcf",
+      "cityName": "Debre Zeyit",
+      "country": "Ethiopia",
+      "emoji": "🇪🇹",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 10.801441866632018,
+        "lng": 35.41168212890626
+      }
+    },
+    {
+      "id": "9100",
+      "cityName": "Lucena del Cid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.147640447325934,
+        "lng": -0.21423339843750003
+      }
+    },
+    {
+      "id": "1fc5",
+      "cityName": "Mosqueruela",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.40521103446309,
+        "lng": -0.4449462890625
+      }
+    },
+    {
+      "id": "a548",
+      "cityName": "Vistabella del Maestrazgo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 40.26921874161294,
+        "lng": -0.35980224609375006
+      }
+    },
+    {
+      "id": "aca6",
+      "cityName": "Yecla",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-06",
+      "notes": "",
+      "position": {
+        "lat": 38.73030576885634,
+        "lng": -1.1645507812500002
+      }
     }
   ]
 }
