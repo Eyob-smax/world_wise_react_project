@@ -1,47 +1,43 @@
-import { useState, useEffect, type ReactNode } from "react";
+import { useEffect, type ReactNode, useReducer } from "react";
 import type { ICity } from "../lib/types";
 import { CitiesContext } from "./useCities";
+import { reducer } from "../lib/utils";
+import { initialState } from "../lib/utils";
 const BASE_URL = "http://localhost:8000/cities/";
 
 function CitiesProvider({ children }: { children: ReactNode }) {
-  const [cities, setCities] = useState<ICity[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [currentCity, setCurrentCity] = useState<ICity | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [{ cities, loading, currentCity, error }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   useEffect(() => {
     (async () => {
-      setError(null);
-      setLoading(true);
+      dispatch({ type: "loading" });
       try {
         const response = await fetch(BASE_URL);
         const data = await response.json();
-        setCities(data);
+        dispatch({ type: "cities/loaded", payload: data });
       } catch (err) {
         const { message } = err as Error;
-        setError(message);
-      } finally {
-        setLoading(false);
+        dispatch({ type: "rejected", payload: message });
       }
     })();
-  }, [setCities, setLoading]);
-
+  }, []);
   async function getCity(id: string) {
-    setLoading(true);
+    dispatch({ type: "loading" });
     try {
       const response = await fetch(BASE_URL + id);
       const data = await response.json();
-      setCurrentCity(data);
+      dispatch({ type: "city/loaded", payload: data });
     } catch (err) {
       const { message } = err as Error;
-      setError(message);
-    } finally {
-      setLoading(false);
+      dispatch({ type: "rejected", payload: message });
     }
   }
 
   async function createCity(newCity: ICity) {
-    setLoading(true);
+    dispatch({ type: "loading" });
     try {
       const response = await fetch(BASE_URL, {
         method: "POST",
@@ -49,29 +45,25 @@ function CitiesProvider({ children }: { children: ReactNode }) {
         body: JSON.stringify(newCity),
       });
       const data = await response.json();
-      setCities((prev) => [...prev, data]);
-      return data; // Important for awaiting in the form
+
+      dispatch({ type: "cities/created", payload: data });
+      return data;
     } catch (err) {
-      const error = err as Error;
-      setError(error.message);
-      throw error;
-    } finally {
-      setLoading(false);
+      const { message } = err as Error;
+      dispatch({ type: "rejected", payload: message });
     }
   }
 
   async function deleteCity(id: string) {
-    setLoading(true);
+    dispatch({ type: "loading" });
     try {
       await fetch(BASE_URL + id, {
         method: "DELETE",
       });
-      setCities((prev) => prev.filter((city) => city.id !== id));
+      dispatch({ type: "city/delete", payload: id });
     } catch (err) {
       const { message } = err as Error;
-      setError(message);
-    } finally {
-      setLoading(false);
+      dispatch({ type: "rejected", payload: message });
     }
   }
 

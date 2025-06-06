@@ -35,3 +35,20 @@ export type TMapPosition = [number, number];
 export interface IChangeCenterProps {
   position: TMapPosition;
 }
+
+export interface IReducerInitialState {
+  cities: ICity[];
+  loading: boolean;
+  currentCity: ICity | null;
+  error: null | string;
+}
+
+export type Action =
+  | { type: "cities/loaded"; payload: ICity[] }
+  | { type: "city/delete"; payload: string }
+  | { type: "city/loaded"; payload: ICity }
+  | { type: "cities/created"; payload: ICity }
+  | { type: "city/loaded"; payload: ICity }
+  | { type: "city/getcity"; payload: ICity }
+  | { type: "loading" }
+  | { type: "rejected"; payload: string };
