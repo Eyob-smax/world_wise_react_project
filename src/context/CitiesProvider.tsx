@@ -3,7 +3,7 @@ import type { ICity } from "../lib/types";
 import { CitiesContext } from "../customhooks/useCities";
 import { reducer } from "../lib/utils";
 import { initialState } from "../lib/utils";
-const BASE_URL = "http://localhost:8000/cities/";
+const BASE_URL = "http://localhost:9000/cities/";
 
 function CitiesProvider({ children }: { children: ReactNode }) {
   const [{ cities, loading, currentCity, error }, dispatch] = useReducer(
@@ -39,9 +39,10 @@ function CitiesProvider({ children }: { children: ReactNode }) {
   async function createCity(newCity: ICity) {
     dispatch({ type: "loading" });
     try {
+      console.log("name");
       const response = await fetch(BASE_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: "post",
+        headers: { "tontent-type": "application/json" },
         body: JSON.stringify(newCity),
       });
       const data = await response.json();
@@ -50,6 +51,7 @@ function CitiesProvider({ children }: { children: ReactNode }) {
       return data;
     } catch (err) {
       const { message } = err as Error;
+      console.log(message);
       dispatch({ type: "rejected", payload: message });
     }
   }

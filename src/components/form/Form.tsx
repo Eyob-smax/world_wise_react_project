@@ -22,7 +22,6 @@ function Form() {
   const [lat, lng] = useURLPosition();
   const [emoji, setEmoji] = useState("");
   const [geoCodingError, setGeoCodingError] = useState<string | null>(null);
-  console.log(country);
   const [geoLoading, setGeoLoading] = useState(false);
   const { createCity, error, loading } = useCities();
   const navigate = useNavigate();
@@ -69,7 +68,7 @@ function Form() {
       },
     };
 
-    await Promise.resolve(createCity(newCity));
+    createCity(newCity);
     navigate("/app/cities");
   }
 

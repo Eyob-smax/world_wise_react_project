@@ -25,30 +25,6 @@
       }
     },
     {
-      "id": "f19f",
-      "cityName": "Villahermosa del Rio",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 40.2313150803688,
-        "lng": -0.42572021484375
-      }
-    },
-    {
-      "id": "f636",
-      "cityName": "Rubielos de Mora",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "",
-      "position": {
-        "lat": 40.17257757632171,
-        "lng": -0.6729125976562501
-      }
-    },
-    {
       "id": "1eec",
       "cityName": "Barracas",
       "country": "Spain",
@@ -106,6 +82,306 @@
       "position": {
         "lat": 40.40521103446309,
         "lng": -0.4449462890625
+      }
+    },
+    {
+      "id": "11b6",
+      "cityName": "Infantes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 38.72709175263502,
+        "lng": -3.00201416015625
+      }
+    },
+    {
+      "id": "2211",
+      "cityName": "Andilla",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.773160423651,
+        "lng": -0.7745361328125
+      }
+    },
+    {
+      "id": "a789",
+      "cityName": "Aguilar del Alfambra",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.5807366293273,
+        "lng": -0.8569335937500001
+      }
+    },
+    {
+      "id": "77d1",
+      "cityName": "Albacete",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.01306156156605,
+        "lng": -1.8457031250000002
+      }
+    },
+    {
+      "id": "6560",
+      "cityName": "Albacete",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.01306156156605,
+        "lng": -1.8457031250000002
+      }
+    },
+    {
+      "id": "e514",
+      "cityName": "Vilar de Canes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.34038736116426,
+        "lng": -0.05218505859375001
+      }
+    },
+    {
+      "id": "29c9",
+      "cityName": "Fuentes de Ayodar",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.02584415502121,
+        "lng": -0.42572021484375
+      }
+    },
+    {
+      "id": "5c21",
+      "cityName": "Cortes de Arenoso",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.22941538861752,
+        "lng": -0.5245971679687501
+      }
+    },
+    {
+      "id": "7b4b",
+      "cityName": "Puebla de San Miguel",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.05092063526595,
+        "lng": -1.0876464843750002
+      }
+    },
+    {
+      "id": "b9b5",
+      "cityName": "Cedrillas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.42401912953597,
+        "lng": -0.7910156250000001
+      }
+    },
+    {
+      "id": "71be",
+      "cityName": "Albarracin",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.419840007184064,
+        "lng": -1.4392089843750002
+      }
+    },
+    {
+      "id": "1c3e",
+      "cityName": "Cuenca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.06378883059414,
+        "lng": -2.1203613281250004
+      }
+    },
+    {
+      "id": "a07c",
+      "cityName": "Lliria",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.62321740851762,
+        "lng": -0.5932617187500001
+      }
+    },
+    {
+      "id": "7d7b",
+      "cityName": "Lliria",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.62321740851762,
+        "lng": -0.5932617187500001
+      }
+    },
+    {
+      "id": "d71b",
+      "cityName": "Talayuelas",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.80876520186069,
+        "lng": -1.2715545568347666
+      }
+    },
+    {
+      "id": "6534",
+      "cityName": "Motilla del Palancar",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.56611135585318,
+        "lng": -1.9033813476562502
+      }
+    },
+    {
+      "id": "255e",
+      "cityName": "Algete",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.58471786731929,
+        "lng": -3.4909057617187504
+      }
+    },
+    {
+      "id": "3d0c",
+      "cityName": "Segorbe",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.84906336638898,
+        "lng": -0.47790527343750006
+      }
+    },
+    {
+      "id": "25da",
+      "cityName": "Gargallo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.839100057257525,
+        "lng": -0.5681133335951928
+      }
+    },
+    {
+      "id": "aa99",
+      "cityName": "Villarluengo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.670618753818395,
+        "lng": -0.5465698242187501
+      }
+    },
+    {
+      "id": "4a18",
+      "cityName": "home Town",
+      "country": "Ethiopia",
+      "emoji": "🇪🇹",
+      "date": "2025-06-06",
+      "notes": "This is where I used to live.",
+      "position": {
+        "lat": 11.958045414448664,
+        "lng": 36.5017318725586
+      }
+    },
+    {
+      "id": "b7a9",
+      "cityName": "Teresa",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 39.91225178296341,
+        "lng": -0.6591796875000001
+      }
+    },
+    {
+      "id": "e4d0",
+      "cityName": "Cabra de Mora",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.306905586410785,
+        "lng": -0.8047485351562501
+      }
+    },
+    {
+      "id": "816b",
+      "cityName": "Sarrion",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.10566634302604,
+        "lng": -0.8349609375000001
+      }
+    },
+    {
+      "id": "fd76",
+      "cityName": "Guadalajara",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-06-07",
+      "notes": "",
+      "position": {
+        "lat": 40.6308054033644,
+        "lng": -3.1585693359375
       }
     }
   ]

@@ -72,6 +72,6 @@ export type TUserReducerAction =
 export interface IAuthContextValue {
   user: IUser | null;
   isAuthenticated: boolean;
-  login: (username: string, password: string) => void;
+  login: (email: string, password: string) => void;
   logout: () => void;
 }

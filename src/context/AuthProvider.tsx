@@ -21,11 +21,11 @@ function AuthProvider({ children }: { children: ReactNode }) {
     initialAuthState
   );
 
-  function login(username: string, password: string) {
-    if (!username && !password) {
-      throw new Error("Username and Password required!");
+  function login(email: string, password: string) {
+    if (!email && !password) {
+      throw new Error("email and Password required!");
     }
-    if (username === FAKE_USER.name && password === FAKE_USER.password) {
+    if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "user/login", payload: FAKE_USER });
     } else {
       throw new Error("Invalid credentials");

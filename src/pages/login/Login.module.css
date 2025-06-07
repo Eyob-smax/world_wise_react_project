@@ -17,10 +17,20 @@
   /* Different from other form */
   width: 48rem;
   margin: 8rem auto;
+  color: white;
 }
 
 .row {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: black;
+}
+
+.row label {
+  color: white;
+}
+
+.form button {
+  color: white;
 }

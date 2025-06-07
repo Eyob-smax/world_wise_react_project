@@ -8,4 +8,5 @@ export function useAuth() {
   if (!context) {
     throw new Error("Auth context used outside its provider!");
   }
+  return context;
 }
