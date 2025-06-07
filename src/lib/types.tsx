@@ -43,6 +43,18 @@ export interface IReducerInitialState {
   error: null | string;
 }
 
+export interface IUser {
+  name: string;
+  email: string;
+  password: string;
+  avatar: string;
+}
+
+export interface IInitialUser {
+  user: IUser | null;
+  isAuthenticated: boolean;
+}
+
 export type Action =
   | { type: "cities/loaded"; payload: ICity[] }
   | { type: "city/delete"; payload: string }
@@ -52,3 +64,14 @@ export type Action =
   | { type: "city/getcity"; payload: ICity }
   | { type: "loading" }
   | { type: "rejected"; payload: string };
+
+export type TUserReducerAction =
+  | { type: "user/logout" }
+  | { type: "user/login"; payload: IUser };
+
+export interface IAuthContextValue {
+  user: IUser | null;
+  isAuthenticated: boolean;
+  login: (username: string, password: string) => void;
+  logout: () => void;
+}

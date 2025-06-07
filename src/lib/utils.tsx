@@ -1,4 +1,9 @@
-import type { Action, IReducerInitialState } from "./types";
+import type {
+  Action,
+  IInitialUser,
+  IReducerInitialState,
+  TUserReducerAction,
+} from "./types";
 
 export const formatDate = (date: Date | number | string, optional = false) => {
   if (!date) return "N/A";
@@ -60,5 +65,19 @@ export function reducer(
       return { ...state, error: action.payload, loading: false };
     default:
       throw new Error("Unknow action type");
+  }
+}
+
+export function authReducer(
+  state: IInitialUser,
+  action: TUserReducerAction
+): IInitialUser {
+  switch (action.type) {
+    case "user/login":
+      return { ...state, user: action.payload, isAuthenticated: true };
+    case "user/logout":
+      return { ...state, user: null, isAuthenticated: false };
+    default:
+      throw new Error("Unknown action types for auth reducer!");
   }
 }

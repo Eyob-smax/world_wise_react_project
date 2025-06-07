@@ -2,7 +2,7 @@ import styles from "./CityItem.module.css";
 import type { ICity } from "../../lib/types";
 import { formatDate } from "../../lib/utils";
 import { Link } from "react-router-dom";
-import useCities from "../../context/useCities";
+import useCities from "../../customhooks/useCities";
 import { useEffect, type MouseEvent } from "react";
 import useLocalStorage from "../../customhooks/useLocalStorage";
 

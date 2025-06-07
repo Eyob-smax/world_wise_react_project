@@ -107,30 +107,6 @@
         "lat": 40.40521103446309,
         "lng": -0.4449462890625
       }
-    },
-    {
-      "id": "0d0c",
-      "cityName": "Cortes de Arenoso",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "jalfhasdlkfjas",
-      "position": {
-        "lat": 40.22522420036328,
-        "lng": -0.5493164062500001
-      }
-    },
-    {
-      "id": "88dc",
-      "cityName": "Vilanova d'Alcolea",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2025-06-06",
-      "notes": "kjdhalskdas",
-      "position": {
-        "lat": 40.21893693173566,
-        "lng": 0.07690429687500001
-      }
     }
   ]
 }

@@ -2,7 +2,7 @@ import Spinner from "../spinner/Spinner";
 import CityItem from "./CityItem";
 import styles from "./CityList.module.css";
 import Message from "../message/Message";
-import useCities from "../../context/useCities";
+import useCities from "../../customhooks/useCities";
 
 export default function CityList() {
   const { cities, loading } = useCities();

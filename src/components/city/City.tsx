@@ -2,7 +2,7 @@ import styles from "./City.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { formatDate } from "../../lib/utils";
-import useCities from "../../context/useCities";
+import useCities from "../../customhooks/useCities";
 import Spinner from "../spinner/Spinner";
 import BackButton from "../BackButton";
 

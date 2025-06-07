@@ -3,7 +3,7 @@ import styles from "./CountryList.module.css";
 import type { ICity } from "../../lib/types";
 import Message from "../message/Message";
 import CountryItem from "./CountryItem";
-import useCities from "../../context/useCities";
+import useCities from "../../customhooks/useCities";
 
 type Tcountry = Array<Pick<ICity, "id" | "emoji" | "country">>;
 

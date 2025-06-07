@@ -1,6 +1,6 @@
 import { useEffect, type ReactNode, useReducer } from "react";
 import type { ICity } from "../lib/types";
-import { CitiesContext } from "./useCities";
+import { CitiesContext } from "../customhooks/useCities";
 import { reducer } from "../lib/utils";
 import { initialState } from "../lib/utils";
 const BASE_URL = "http://localhost:8000/cities/";
@@ -60,6 +60,7 @@ function CitiesProvider({ children }: { children: ReactNode }) {
       await fetch(BASE_URL + id, {
         method: "DELETE",
       });
+      console.log(id);
       dispatch({ type: "city/delete", payload: id });
     } catch (err) {
       const { message } = err as Error;

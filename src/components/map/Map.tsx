@@ -8,7 +8,7 @@ import {
 } from "react-leaflet";
 
 import styles from "./Map.module.css";
-import useCities from "../../context/useCities";
+import useCities from "../../customhooks/useCities";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { IChangeCenterProps, TMapPosition } from "../../lib/types";
